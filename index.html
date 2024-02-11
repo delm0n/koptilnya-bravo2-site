@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>koptilnya-bravo2</title>
+    <meta name="description" content="Мета-описание" />
+    <link rel="stylesheet" href="build/css/main.min.css" />
+  </head>
+  <body
+    data-goods='{"482894":{"name":"\u041a\u043e\u043f\u0442\u0438\u043b\u044c\u043d\u044f Bravo 2 10 \u043b","oldPrice":10590,"price":7490,"oldPriceF":"10 590","priceF":"7 490","image":"","discount":0},"482895":{"name":"\u041a\u043e\u043f\u0442\u0438\u043b\u044c\u043d\u044f Bravo 2 20 \u043b","oldPrice":11190,"price":7990,"oldPriceF":"11 190","priceF":"7 990","image":"","discount":0},"482896":{"name":"\u041a\u043e\u043f\u0442\u0438\u043b\u044c\u043d\u044f Bravo 2 30 \u043b","oldPrice":12890,"price":8990,"oldPriceF":"12 890","priceF":"8 990","image":"","discount":0},"48101":{"name":"\u041f\u0440\u043e\u0442\u0438\u0432\u0435\u043d\u044c \u0434\u043b\u044f \u043a\u043e\u043f\u0442\u0438\u043b\u044c\u043d\u0438 \u0411\u0440\u0430\u0432\u043e NEW \u0441 \u043d\u0430\u0441\u0430\u0434\u043a\u043e\u0439 (\u0418\u041f\u0413)","oldPrice":1490,"price":1390,"oldPriceF":"1 490","priceF":"1 390","image":"https:\/\/apispn.ru\/apiImage\/2775\/nabor-nasadka-poddon-min.jpg","discount":0},"48099":{"name":"\u041f\u0440\u043e\u0442\u0438\u0432\u0435\u043d\u044c  \u0434\u043b\u044f \u043a\u043e\u043f\u0442\u0438\u043b\u044c\u043d\u0438 \u0411\u0440\u0430\u0432\u043e NEW (\u0418\u041f\u0413)","oldPrice":1590,"price":1190,"oldPriceF":"1 590","priceF":"1 190","image":"https:\/\/apispn.ru\/apiImage\/2784\/poddon-min.jpg","discount":0},"481298":{"name":"\u0429\u0435\u043f\u0430 \u041e\u043b\u044c\u0445\u0438 1 \u043a\u0433 (\u0422\u041c) \u0418\u041f\u0413 - 300","oldPrice":390,"price":295,"oldPriceF":"390","priceF":"295","image":"","discount":0},"4783":{"name":"\u041d\u0430\u0431\u043e\u0440 \u0429\u0435\u043f\u044b (7 \u0432\u0438\u0434\u043e\u0432) (\u0414\u041e\u041f) \u0418\u041f\u0413","oldPrice":2290,"price":450,"oldPriceF":"2 290","priceF":"450","image":"https:\/\/apispn.ru\/apiImage\/2251\/nabor schep.jpg","discount":0},"4784":{"name":"\u041d\u0430\u0431\u043e\u0440 \u0449\u0435\u043f\u044b (\u041c\u044f\u0441\u043e) (\u0414\u041e\u041f) \u0418\u041f\u0413","oldPrice":1280,"price":320,"oldPriceF":"1 280","priceF":"320","image":"https:\/\/apispn.ru\/apiImage\/2270\/schepms.jpg","discount":0},"4786":{"name":"\u041d\u0430\u0431\u043e\u0440 \u0449\u0435\u043f\u044b (\u041f\u0442\u0438\u0446\u0430) (\u0414\u041e\u041f) \u0418\u041f\u0413","oldPrice":1280,"price":320,"oldPriceF":"1 280","priceF":"320","image":"https:\/\/apispn.ru\/apiImage\/2290\/schepkr.jpg","discount":0},"4788":{"name":"\u041b\u044c\u043d\u044f\u043d\u043e\u0439 \u0436\u0433\u0443\u0442 50\u043c (\u0414\u041e\u041f )\u0418\u041f\u0413","oldPrice":400,"price":290,"oldPriceF":"400","priceF":"290","image":"https:\/\/apispn.ru\/apiImage\/2368\/lnya.jpg","discount":0},"482489":{"name":"\u0414\u044b\u043c\u043e\u0433\u0435\u043d\u0435\u0440\u0430\u0442\u043e\u0440 MERKEL 2 (STANDART)","oldPrice":9990,"price":7990,"oldPriceF":"9 990","priceF":"7 990","image":"","discount":0}}'
+  >
+    <div id="app"></div>
+
+    <script>
+      var year = "2024";
+      var phone = "8 800 250 59 32";
+      var webp = "";
+      var goodsJson = JSON.parse(document.body.getAttribute("data-goods"));
+      const hideForm = "";
+      var testVersion = false;
+
+      var goods = {
+        bravo10: 482894,
+        bravo20: 482895,
+        bravo30: 482896,
+
+        naspro: 48101,
+        pro: 48099,
+        schepa_ol: 481298,
+        schepa_7: 4783,
+        schepa_meet: 4784,
+        schepa_meetbird: 4786,
+        jgut: 4788,
+
+        merkel: 482489,
+      };
+
+      function testWebP() {
+        const webP = new Image();
+        webP.src =
+          "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+        webP.onload = webP.onerror = function () {
+          webP.height === 2 ? (webp = "webp") : (webp = "nowebp");
+        };
+      }
+    </script>
+    <script src="build/main.min.js"></script>
+
+    <!-- fancybox -->
+    <script>
+      window.addEventListener("DOMContentLoaded", function (event) {
+        var fancyscc = document.createElement("link");
+        fancyscc.rel = "stylesheet";
+        fancyscc.href = "js/apispn.ru_css-min_fancybox-4.min.css";
+        document.head.insertBefore(
+          fancyscc,
+          document.head.childNodes[document.head.childNodes.length - 1]
+            .nextSibling
+        );
+
+        var fancyscript = document.createElement("script");
+        fancyscript.type = "text/javascript";
+        fancyscript.src = "js/apispn.ru_js-min_fancybox-4.min.js";
+        document.querySelector("body").appendChild(fancyscript);
+      });
+    </script>
+    <!-- fancybox -->
+
+    <!-- jquery -->
+    <script src="js/apispn.ru_js-min_jquery-3.6.0.min.js"></script>
+    <!-- jquery -->
+
+    <!-- other jquery plugins -->
+    <script
+      defer
+      src="js/apispn.ru_js-min_jquery.maskedinput_new-mask.min.js"
+    ></script>
+    <!-- other jquery plugins -->
+  </body>
+</html>
